@@ -1,18 +1,11 @@
 <html>
     <head>
-        <script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
-        <script>
-        $('#variable').on('click', function () {
-            $(this).attr('data-before', );
-        });
-        </script>
         <style type="text/css">
-
         .text{
-            position: relative;
+            position: relative; /* 使用::after */
             font-size: 20px;
-            transition:1s;
-            padding-bottom: 8px;
+            transition:1s; /* 过渡时间 */
+            padding-bottom: 8px;  /* 文字与下划线的间隔 */
         }
 
         .text::after{
@@ -34,7 +27,6 @@
         left: 0%;
         width: 100%;
         }
-
         </style>
 
     </head>
@@ -46,7 +38,7 @@
             var x = document.getElementById('variable');
             var btn = document.getElementById('btn');
             btn.addEventListener("click",function(){
-                x.classList.toggle("blue");
+                x.classList.toggle("blue"); /* 添加的是class */
             }, false)
         </script>
     </body>
