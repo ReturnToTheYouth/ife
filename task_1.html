@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+        <script>
+        $('#variable').on('click', function () {
+            $(this).attr('data-before', );
+        });
+        </script>
+        <style type="text/css">
+
+        .text{
+            position: relative;
+            font-size: 20px;
+            transition:1s;
+            padding-bottom: 8px;
+        }
+
+        .text::after{
+            content:"";
+            width: 0;
+            height: 2px;
+            background: blue;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transition: all 1s;
+        }
+
+        .blue{
+            color:blue;
+        }
+
+        .blue:after{
+        left: 0%;
+        width: 100%;
+        }
+
+        </style>
+
+    </head>
+    <body>
+        <span id="variable" class="text">前端学院</span><br /><br />
+        <div id="underline"></div> 
+        <button type="button" id="btn" >切换样式</button>
+        <script>
+            var x = document.getElementById('variable');
+            var btn = document.getElementById('btn');
+            btn.addEventListener("click",function(){
+                x.classList.toggle("blue");
+            }, false)
+        </script>
+    </body>
+</html>
